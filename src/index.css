@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Nunito Sans', 'Trebuchet MS', sans-serif;
+  color: #252529;
+  background: #eceeed;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: #eceeed; }
+button { font: inherit; }
+
+.app-shell { min-height: 100vh; display: flex; justify-content: center; background: #eceeed; }
+.phone-screen { width: 100%; max-width: 640px; min-height: 100vh; background: #f4f5f4; overflow: hidden; position: relative; padding-bottom: 148px; }
+.top-header { height: 207px; padding: 20px 30px 25px; color: white; background: linear-gradient(120deg, #f0442e 0%, #ff6332 100%); }
+.brand-row { display: flex; align-items: center; gap: 21px; }
+.brand-row h1 { font-size: 30px; line-height: 1; margin: 0 0 9px; font-weight: 900; letter-spacing: .2px; }
+.brand-row p { font-size: 20px; margin: 0; opacity: .88; letter-spacing: .2px; }
+.brand-mark { width: 88px; height: 64px; flex: 0 0 88px; display: flex; align-items: center; justify-content: center; }
+.brand-logo { display: block; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 4px 4px rgba(119,35,18,.3)); }
+.driver-row { display: flex; align-items: center; justify-content: space-between; margin-top: 25px; }
+.driver-row strong { display: block; font-size: 21px; letter-spacing: .5px; }
+.driver-id { display: flex; align-items: center; gap: 7px; margin: 9px 0 0 80px; font-size: 17px; }
+.logout-button { color: white; background: transparent; border: 2px solid rgba(255,255,255,.65); border-radius: 12px; padding: 12px 24px; font-size: 21px; font-weight: 800; }
+.content-area { padding: 22px 29px 0; }
+.operation-card { min-height: 101px; background: #fff9f0; border: 1px solid #f2d3a8; border-radius: 17px; box-shadow: 0 2px 5px rgba(0,0,0,.06); display: flex; align-items: center; padding: 14px 21px; gap: 19px; }
+.operation-icon { width: 61px; height: 61px; flex: 0 0 61px; display: grid; place-items: center; border-radius: 50%; color: #bb4d27; background: #fff0d8; }
+.operation-copy h2 { margin: 0 0 8px; color: #a83c1d; font-size: 21px; font-weight: 900; }
+.operation-details { display: flex; gap: 18px; color: #a95735; font-size: 18px; white-space: nowrap; }
+.operation-details span { display: flex; align-items: center; gap: 6px; }
+.checkin-panel { margin-top: 20px; padding: 30px 27px 31px; background: white; border-radius: 25px; box-shadow: 0 5px 15px rgba(33,42,45,.04); text-align: center; }
+.panel-label { color: #ce5d47; font-weight: 900; font-size: 17px; letter-spacing: 2.5px; margin-bottom: 20px; }
+.receipt-card { text-align: left; border-top: 6px solid #ea4d2d; border-radius: 25px; padding: 19px 24px 17px; box-shadow: 0 6px 20px rgba(0,0,0,.07); }
+.receipt-topline { display: flex; align-items: center; justify-content: space-between; }
+.receipt-caption { color: #77787b; font-size: 16px; letter-spacing: 1.7px; font-weight: 800; }
+.confirmed-pill { color: #137848; background: #edfbf6; border-radius: 22px; padding: 9px 16px; font-size: 16px; font-weight: 900; letter-spacing: 1px; }
+.receipt-card h2 { margin: 18px 0 16px; font-size: 29px; line-height: 1.15; letter-spacing: .3px; }
+.receipt-rows > div { min-height: 69px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ededed; color: #828286; font-size: 22px; }
+.receipt-rows > div:last-child { border-bottom: 0; }.receipt-rows strong { color: #28282c; font-size: 30px; font-weight: 900; letter-spacing: .5px; }
+.receipt-meta { display: flex; justify-content: space-between; gap: 8px; margin: 18px -4px 0; padding: 9px 0 12px; color: #b28877; font-size: 16px; white-space: nowrap; border-bottom: 1px solid #f5ece8; }
+.receipt-meta span { display: flex; align-items: center; gap: 7px; }.receipt-meta b { color: #cf573c; font-size: 17px; }
+.security-note { color: #6f7075; font-size: 19px; line-height: 1.45; margin: 18px 0 20px; }
+.call-button { width: 100%; height: 65px; border: 0; border-radius: 16px; background: linear-gradient(100deg, #f0442f, #ff6332); color: white; font-size: 21px; font-weight: 900; display: flex; justify-content: center; align-items: center; gap: 7px; box-shadow: 0 7px 16px rgba(238,77,46,.2); cursor: pointer; transition: transform .2s, filter .2s; }.call-button:hover { filter: brightness(1.04); transform: translateY(-1px); }.call-button:active { transform: translateY(1px); }
+.bottom-nav { position: absolute; left: 0; right: 0; bottom: 0; height: 143px; display: flex; justify-content: space-around; align-items: flex-start; padding-top: 26px; background: white; border-top: 1px solid #e7e7e7; }.nav-button { border: 0; padding: 0; background: transparent; color: #5c5d60; display: flex; flex-direction: column; align-items: center; gap: 9px; font-size: 17px; cursor: pointer; min-width: 92px; }.nav-button.active { color: #df4e36; }.nav-button svg { transition: transform .2s; }.nav-button:hover svg { transform: translateY(-2px); }.home-indicator { position: absolute; bottom: 8px; left: 50%; width: 112px; height: 5px; transform: translateX(-50%); background: #f0f0f0; border-radius: 10px; }
+
+.call-content-area { padding-top: 22px; }
+.call-panel { min-height: 630px; padding: 43px 27px 51px; background: #fff; border-radius: 25px; box-shadow: 0 5px 15px rgba(33,42,45,.04); }
+.call-panel-label { margin-bottom: 20px; color: #858589; font-size: 22px; font-weight: 900; letter-spacing: 2.2px; text-align: center; }
+.call-panel-label .editable-value { color: inherit; }
+.call-card { border-top: 6px solid #ea4d2d; border-radius: 25px; padding: 20px 24px 18px; box-shadow: 0 6px 20px rgba(0,0,0,.07); }
+.call-card-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.call-card-caption { color: #77787b; font-size: 16px; letter-spacing: 1.7px; font-weight: 800; }
+.dock-pill { display: inline-flex; align-items: center; gap: 5px; padding: 9px 16px; border-radius: 24px; background: #fff6f2; color: #d6533c; font-size: 21px; font-weight: 900; white-space: nowrap; }
+.call-card h2 { margin: 19px 0 16px; font-size: 30px; line-height: 1.15; letter-spacing: .3px; }
+.call-rows > div { min-height: 70px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ededed; color: #828286; font-size: 22px; }
+.call-rows > div:last-child { border-bottom: 0; }
+.call-rows strong { color: #28282c; font-size: 30px; font-weight: 900; letter-spacing: .5px; }
+.call-meta { display: flex; align-items: center; gap: 8px; margin: 22px -4px 0; padding: 8px 0 12px; overflow: hidden; color: #b86f5d; font-size: 16px; white-space: nowrap; border-bottom: 1px solid #f5ece8; }
+.call-meta b { color: #cf573c; font-size: 17px; }.call-meta-separator { color: #c99a8c; }.call-meta-security { display: inline-flex; align-items: center; gap: 7px; }
+
+.editable-value { display: inline-flex; align-items: center; position: relative; border-radius: 5px; cursor: text; }
+.editable-value:hover { background: rgba(255,255,255,.32); }
+.edit-hint { position: absolute; left: calc(100% + 4px); opacity: 0; pointer-events: none; transition: opacity .15s; }
+.editable-value:hover .edit-hint { opacity: .72; }
+.receipt-card h2 .editable-value, .receipt-rows strong .editable-value, .call-card h2 .editable-value, .call-rows strong .editable-value { font-weight: 900; }
+.editable-input { min-width: 42px; max-width: 100%; padding: 1px 4px; border: 1px solid currentColor; border-radius: 5px; outline: 2px solid rgba(255,255,255,.45); background: rgba(255,255,255,.94); color: inherit; font: inherit; font-weight: inherit; letter-spacing: inherit; }
+.driver-row .editable-input { width: 230px; }
+.receipt-card .editable-input, .call-card .editable-input { width: 100%; font-weight: 900; }
+.receipt-meta .editable-input, .call-meta .editable-input { width: 152px; font-size: 15px; }
+@media (max-width: 520px) { .top-header { padding-left: 20px; padding-right: 20px; height: 207px; }.content-area { padding-left: 15px; padding-right: 15px; }.brand-row { gap: 14px; }.brand-row h1 { font-size: 25px; }.brand-row p { font-size: 18px; }.operation-card { padding-left: 14px; padding-right: 14px; gap: 12px; }.operation-details { gap: 8px; font-size: 14px; }.operation-details svg { width: 15px; }.operation-icon { width: 54px; height: 54px; flex-basis: 54px; }.checkin-panel { padding-left: 15px; padding-right: 15px; }.receipt-card, .call-card { padding-left: 18px; padding-right: 18px; }.receipt-card h2, .call-card h2 { font-size: 24px; }.receipt-rows > div, .call-rows > div { font-size: 18px; }.receipt-rows strong, .call-rows strong { font-size: 26px; }.receipt-meta, .call-meta { font-size: 12px; }.receipt-meta b, .call-meta b { font-size: 13px; }.driver-id { margin-left: 0; }.call-panel { padding-left: 15px; padding-right: 15px; }.call-panel-label { font-size: 17px; }.call-card-caption { font-size: 14px; }.dock-pill { font-size: 18px; padding-left: 12px; padding-right: 12px; } }
+@media (min-width: 641px) { .phone-screen { box-shadow: 0 0 35px rgba(0,0,0,.08); } }
